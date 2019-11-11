@@ -1,0 +1,1317 @@
+
+
+Started GET "/" for ::1 at 2019-11-11 17:05:14 +0700
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/m/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/m/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/m/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.1ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.0ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/m/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (142.5ms)
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20180810080316)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810080316"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateFriends (20180810080743)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "friend_id" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810080743"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateImages (20180810082050)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810082050"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAlbums (20180810082200)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/m/Desktop/weblab/foodaholic/db/migrate/20180810082200_create_albums.rb:8)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "title" varchar, "content" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810082200"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20180810082342)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/m/Desktop/weblab/foodaholic/db/migrate/20180810082342_create_tags.rb:6)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810082342"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddAlbumToImage (20180810082351)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "images" ADD "album_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810082351"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLikes (20180810082413)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/m/Desktop/weblab/foodaholic/db/migrate/20180810082413_create_likes.rb:8)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "likeable_id" integer, "likeable_type" varchar, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810082413"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20180810082535)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/m/Desktop/weblab/foodaholic/db/migrate/20180810082535_create_comments.rb:10)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commentable_id" integer, "commentable_type" varchar, "user_id" integer, "content" varchar, "type" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810082535"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateRecipes (20180810082742)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/m/Desktop/weblab/foodaholic/db/migrate/20180810082742_create_recipes.rb:10)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "album_id" integer, "tag_id" integer, "ingredients" varchar, "content" varchar, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810082742"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddUrlToImages (20180810084757)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "images" ADD "image_url" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180810084757"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateShares (20180815083327)
+  [1m[35m (0.0ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/m/Desktop/weblab/foodaholic/db/migrate/20180815083327_create_shares.rb:8)
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "shares" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "shareable_id" integer, "shareable_type" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180815083327"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameToUsers (20180816034510)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "birthday" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "from" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "life_story" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "phone" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180816034510"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddTagToAlbum (20180817035802)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "albums" ADD "tag_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180817035802"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddInteractCountToUser (20180817043811)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "images" ADD "like_count" integer DEFAULT 0[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "images" ADD "comment_count" integer DEFAULT 0
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "images" ADD "share_count" integer DEFAULT 0[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "images" ADD "all_interact_count" integer DEFAULT 0
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "albums" ADD "like_count" integer DEFAULT 0[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "albums" ADD "comment_count" integer DEFAULT 0
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "albums" ADD "share_count" integer DEFAULT 0[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "albums" ADD "all_interact_count" integer DEFAULT 0
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "recipes" ADD "like_count" integer DEFAULT 0[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "recipes" ADD "comment_count" integer DEFAULT 0
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "recipes" ADD "share_count" integer DEFAULT 0[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "recipes" ADD "all_interact_count" integer DEFAULT 0
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817043811"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to AddAvatarToUser (20180817072721)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "avatar" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817072721"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateTagObject (20180819182203)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/m/Desktop/weblab/foodaholic/db/migrate/20180819182203_create_tag_object.rb:7)
+  [1m[35m (0.3ms)[0m  CREATE TABLE "tag_objects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "album_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180819182203"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddIngredientToAlbum (20180819203718)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "albums" ADD "ingredient" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "albums" ADD "post_type" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180819203718"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2019-11-11 17:05:56 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_main.html.erb (0.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav2.html.erb (1.4ms)
+Completed 200 OK in 6156ms (Views: 6127.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-a44016238b0cce3875b1e63f5a4d3853a8f24f8f4184e5de3d8533f8d412c667.css?body=1" for ::1 at 2019-11-11 17:06:02 +0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-11-11 17:06:02 +0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-11-11 17:06:02 +0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-11-11 17:06:02 +0700
+
+
+Started GET "/assets/images.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2019-11-11 17:06:02 +0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for ::1 at 2019-11-11 17:06:02 +0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-11-11 17:06:02 +0700
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-11 17:06:15 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (21.4ms)
+  Rendered layouts/_nav2.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 50.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 17:06:19 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-11 17:06:41 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_nav2.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-11-11 17:06:50 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"om+8N6dLwzjN3BfAGOy61J0tPEf/EqRBPRyQ28oReKnOFzKgBampifULdPcGTPwYwXJ6KjK8aAN0w4lXjUeCnw==", "user"=>{"email"=>"hongnhungnguyen4092@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"SIGN IN"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "hongnhungnguyen4092@gmail.com"]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.9ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"om+8N6dLwzjN3BfAGOy61J0tPEf/EqRBPRyQ28oReKnOFzKgBampifULdPcGTPwYwXJ6KjK8aAN0w4lXjUeCnw==", "user"=>{"email"=>"hongnhungnguyen4092@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"SIGN IN"}
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_nav2.html.erb (0.1ms)
+Completed 200 OK in 158ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 17:06:55 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav2.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 17:07:05 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 17:07:11 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav2.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 17:07:21 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-11 17:07:25 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 17:07:28 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav2.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-11 17:07:45 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"edh0bSrzmS0xGSOtSPlWtbWGjpK3899AxKCkDpMpnIMVoPr6iBHznAnOQJpWWRB56dnI/3pdEwKNf72C1H9mtQ==", "user"=>{"email"=>"hongnhungnguyen4092@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'hongnhungnguyen4092@gmail.com' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "hongnhungnguyen4092@gmail.com"], ["encrypted_password", "$2a$11$/Rc6/TyfZ0zGi7r9TolA..SIHGoh/uMm.IXvEdV5SZ6bF1dCTh1Rq"], ["created_at", "2019-11-11 10:07:45.637124"], ["updated_at", "2019-11-11 10:07:45.637124"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2019-11-11 10:07:45.643526"], ["current_sign_in_at", "2019-11-11 10:07:45.643526"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2019-11-11 10:07:45.644183"], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:07:45 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.5ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mShare Load (0.4ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (2.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_nav2.html.erb (2.0ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:07:49 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY id DESC
+  [1m[36mShare Load (0.3ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (1.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav2.html.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/upload" for ::1 at 2019-11-11 17:07:50 +0700
+Processing by AlbumsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered albums/_form.html.erb (10.8ms)
+  Rendered albums/new.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_nav2.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 36.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:07:55 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mShare Load (0.1ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (1.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ranking" for ::1 at 2019-11-11 17:07:57 +0700
+Processing by SearchsController#index as HTML
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."all_interact_count" DESC LIMIT 40[0m
+  Rendered searchs/index.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_nav2.html.erb (1.5ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-11-11 17:08:00 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = ?  ORDER BY id DESC[0m  [["user_id", 1]]
+  [1m[35mShare Load (0.1ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."user_id" = ?  ORDER BY id DESC  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 32ms (Views: 25.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2019-11-11 17:08:04 +0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:08:13 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mShare Load (0.1ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (1.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/upload" for ::1 at 2019-11-11 17:08:15 +0700
+Processing by AlbumsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered albums/_form.html.erb (2.0ms)
+  Rendered albums/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_nav2.html.erb (1.7ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ranking" for ::1 at 2019-11-11 17:08:17 +0700
+Processing by SearchsController#index as HTML
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."all_interact_count" DESC LIMIT 40[0m
+  Rendered searchs/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_nav2.html.erb (1.4ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-11 17:08:20 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OMG34GfEIGxPjNgmm3veaVqLSvdW0y93yRyA8iiaXPVUuTl3xSZK3XdbuxGF25ilBtQMmpt94zWAw5l+b8ymww=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:08:20 +0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_main.html.erb (0.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_nav2.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 17:08:22 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:08:25 +0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_main.html.erb (0.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-11 17:08:27 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-11-11 17:08:36 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5zXQc4YhvvCh+nX0uovN6LdCS1gBA2MXuVqbfKJ2NMxbuBOjDLw+xLT8TIUJfCmU9miyji77L9NlbUk1tjgsCg==", "user"=>{"email"=>"hongnhungnguyen4092@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"SIGN IN"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "hongnhungnguyen4092@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2019-11-11 10:08:36.428297"], ["sign_in_count", 2], ["updated_at", "2019-11-11 10:08:36.428955"], ["id", 1]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:08:36 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mShare Load (0.1ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav2.html.erb (0.7ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:08:38 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY id DESC
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (1.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/upload" for ::1 at 2019-11-11 17:08:38 +0700
+Processing by AlbumsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered albums/_form.html.erb (2.5ms)
+  Rendered albums/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_nav2.html.erb (2.2ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/albums" for ::1 at 2019-11-11 17:14:18 +0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLdV6wI9ZS9CMSaxBxwk5B/1uOD1Ou35mkcFjmr5uPXqrqV6Zt3q59HHHfcwREC+1kkvVQPE/ARiaKPONC2xlQ==", "images"=>{"image_url"=>[#<ActionDispatch::Http::UploadedFile:0x007f98d6a86a80 @tempfile=#<Tempfile:/var/folders/xy/xh3_w3px68938m_y_x4c6cr80000gn/T/RackMultipart20191111-82028-112bekv.png>, @original_filename="IMG_8973.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"images[image_url][]\"; filename=\"IMG_8973.png\"\r\nContent-Type: image/png\r\n">]}, "album"=>{"title"=>"công viên Yên Sở", "content"=>"đi chơi ở công viên Yên Sở vui lắm", "ingredient"=>""}, "commit"=>"SUBMIT"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "albums" ("title", "content", "user_id", "ingredient", "post_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "công viên Yên Sở"], ["content", "đi chơi ở công viên Yên Sở vui lắm"], ["user_id", 1], ["ingredient", ""], ["post_type", 0], ["created_at", "2019-11-11 10:14:18.047813"], ["updated_at", "2019-11-11 10:14:18.047813"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "images" ("image_url", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["image_url", "IMG_8973.png"], ["album_id", 1], ["created_at", "2019-11-11 10:14:18.064165"], ["updated_at", "2019-11-11 10:14:18.064165"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/albums/1
+Completed 302 Found in 27ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/albums/1" for ::1 at 2019-11-11 17:14:18 +0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mLike Load (0.5ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 1], ["commentable_type", "Album"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered albums/show.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_nav2.html.erb (0.7ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/likes" for ::1 at 2019-11-11 17:14:23 +0700
+Processing by LikesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L+T3pnxZ9pEi9CppK1d+I908Xq3s8bmQfAkr5mHSdYpV/Qc3GLl5WbECES8cDxp5FIDJGBoPqG2EJo2mPwZ86g==", "like"=>{"likeable_id"=>"1", "likeable_type"=>"Album", "redirect"=>"/albums/1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: redirect
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "likes" ("likeable_id", "likeable_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1], ["created_at", "2019-11-11 10:14:23.288859"], ["updated_at", "2019-11-11 10:14:23.288859"]]
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "albums" SET "like_count" = ?, "all_interact_count" = ?, "updated_at" = ? WHERE "albums"."id" = ?[0m  [["like_count", 1], ["all_interact_count", 1], ["updated_at", "2019-11-11 10:14:23.290778"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/albums/1
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/albums/1" for ::1 at 2019-11-11 17:14:23 +0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.2ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?  [["commentable_id", 1], ["commentable_type", "Album"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered albums/show.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/upload" for ::1 at 2019-11-11 17:14:29 +0700
+Processing by AlbumsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered albums/_form.html.erb (2.2ms)
+  Rendered albums/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ranking" for ::1 at 2019-11-11 17:14:31 +0700
+Processing by SearchsController#index as HTML
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."all_interact_count" DESC LIMIT 40
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.5ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (12.2ms)
+  Rendered searchs/index.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_nav2.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/albums/1" for ::1 at 2019-11-11 17:14:34 +0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mLike Load (0.2ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?  [["commentable_id", 1], ["commentable_type", "Album"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered albums/show.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 49.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:14:36 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.0ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (3.7ms)
+  [1m[36mShare Load (0.0ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (6.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/search" for ::1 at 2019-11-11 17:14:44 +0700
+Processing by SearchsController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+DYQmGsYNBJp8rOmhpzBTzx8ZTo/DFOmpAZ3h9pSBK+CL+AJD/i72voEiOCxxKUV9cDyj8nyQltcKdHHhIYNzw==", "search"=>{"q"=>"Yên sở"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."name" LIKE '%Yên sở%' OR "users"."email" LIKE '%Yên sở%')
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (("albums"."title" LIKE '%Yên sở%' OR "albums"."content" LIKE '%Yên sở%') OR "albums"."ingredient" LIKE '%Yên sở%')[0m
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mTagObject Load (0.0ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (5.6ms)
+  Rendered searchs/show.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/search" for ::1 at 2019-11-11 17:14:44 +0700
+Processing by SearchsController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"04NtwrOKB4U80AQo2Wf6d13tK0RtvlZzYDSGmYTJHI2pmp1T12qITa8mP27uP54tlFG88ZtAR46YGyDZ2h0V7Q==", "search"=>{"q"=>""}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mTagObject Load (0.0ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (3.6ms)
+  Rendered searchs/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:14:49 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.0ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.2ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (5.3ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (7.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/albums/1" for ::1 at 2019-11-11 17:14:53 +0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 1], ["commentable_type", "Album"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered albums/show.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 29.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2019-11-11 17:22:52 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = ?  ORDER BY id DESC[0m  [["user_id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  Rendered users/_post.html.erb (2.1ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."user_id" = ?  ORDER BY id DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 26.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/edit" for ::1 at 2019-11-11 17:22:56 +0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_nav2.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:22:59 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY id DESC
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mTagObject Load (0.1ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (7.4ms)
+  [1m[35mShare Load (0.1ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?  [["shareable_type", "Album"]]
+  Rendered static_pages/_signed_in.html.erb (10.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_nav2.html.erb (1.1ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/upload" for ::1 at 2019-11-11 17:23:00 +0700
+Processing by AlbumsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered albums/_form.html.erb (3.1ms)
+  Rendered albums/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav2.html.erb (0.7ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ranking" for ::1 at 2019-11-11 17:23:00 +0700
+Processing by SearchsController#index as HTML
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."all_interact_count" DESC LIMIT 40[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mTagObject Load (0.1ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (8.1ms)
+  Rendered searchs/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/albums/1" for ::1 at 2019-11-11 17:23:10 +0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 1], ["commentable_type", "Album"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered albums/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/shares" for ::1 at 2019-11-11 17:23:12 +0700
+Processing by SharesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Du/1Xtm3C46ZwX9rdF8xL72JE3LUsNtpY3V49BKPk/109gXPvVeERgo3RC1DB1V1dDWExyJOypSbWt60TFuanQ==", "share"=>{"shareable_id"=>"1", "shareable_type"=>"Album", "redirect"=>"/albums/1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: redirect
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "shares" ("shareable_id", "shareable_type", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["shareable_id", 1], ["shareable_type", "Album"], ["user_id", 1], ["created_at", "2019-11-11 10:23:12.178488"], ["updated_at", "2019-11-11 10:23:12.178488"]]
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "albums" SET "share_count" = ?, "all_interact_count" = ?, "updated_at" = ? WHERE "albums"."id" = ?[0m  [["share_count", 1], ["all_interact_count", 5], ["updated_at", "2019-11-11 10:23:12.180129"], ["id", 1]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/albums/1
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/albums/1" for ::1 at 2019-11-11 17:23:12 +0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?  [["commentable_id", 1], ["commentable_type", "Album"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered albums/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_nav2.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:23:23 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.1ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (6.0ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (8.1ms)
+  Rendered static_pages/_signed_in.html.erb (21.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (26.9ms)
+  Rendered layouts/_nav2.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:32:31 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY id DESC
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mTagObject Load (0.1ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.0ms)
+  [1m[35mShare Load (0.1ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?  [["shareable_type", "Album"]]
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (11.0ms)
+  Rendered static_pages/_signed_in.html.erb (18.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (23.9ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:32:36 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.0ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.1ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.0ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.9ms)
+  Rendered static_pages/_signed_in.html.erb (12.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:32:37 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY id DESC
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mTagObject Load (0.1ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (12.3ms)
+  [1m[35mShare Load (0.2ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?  [["shareable_type", "Album"]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (7.5ms)
+  Rendered static_pages/_signed_in.html.erb (25.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (27.4ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:32:38 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.6ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.1ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (66.9ms)
+  [1m[36mShare Load (0.3ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (18.3ms)
+  Rendered static_pages/_signed_in.html.erb (92.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (93.9ms)
+  Rendered layouts/_nav2.html.erb (0.8ms)
+Completed 200 OK in 137ms (Views: 133.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for ::1 at 2019-11-11 17:32:39 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = ?  ORDER BY id DESC[0m  [["user_id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  Rendered users/_post.html.erb (1.7ms)
+  [1m[36mShare Load (0.2ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."user_id" = ?  ORDER BY id DESC[0m  [["user_id", 1]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_post.html.erb (1.9ms)
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/edit" for ::1 at 2019-11-11 17:32:52 +0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:33:22 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (2.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.1ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (23.0ms)
+  [1m[36mShare Load (0.2ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.4ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.3ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (9.4ms)
+  Rendered static_pages/_signed_in.html.erb (39.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (43.6ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 57.9ms | ActiveRecord: 5.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-11 17:33:25 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5i092vMElsatM7CPeRUZZX+vDwXgjTQ1kW+/BS0cWxWcNM1Ll+QZDj7Fi8lOTX0/thOYsBZzJchpQBlFc8hSdQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:33:25 +0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_main.html.erb (0.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:33:28 +0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_main.html.erb (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_nav2.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-11 17:38:40 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav2.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-11-11 17:38:47 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZwXd3Le/DLb+vfPkFpcVkm+XOoiKlo6kg2tpT4aYB0a5WvJhA9gFTRZjKZlzlretSC4KEpR6Cq9EuL63d7fehQ==", "user"=>{"email"=>"hongnhungnguyen4092@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"SIGN IN"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "hongnhungnguyen4092@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2019-11-11 10:08:36.428297"], ["current_sign_in_at", "2019-11-11 10:38:47.288757"], ["sign_in_count", 3], ["updated_at", "2019-11-11 10:38:47.289385"], ["id", 1]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:38:47 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.0ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (7.0ms)
+  Rendered static_pages/_signed_in.html.erb (14.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_nav2.html.erb (0.8ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/upload" for ::1 at 2019-11-11 17:38:57 +0700
+Processing by AlbumsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered albums/_form.html.erb (2.8ms)
+  Rendered albums/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/albums" for ::1 at 2019-11-11 17:43:38 +0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HzzSUE58yYe8j3L2oNyNUHmzeVfP9RzSFAV6qwIaoxtDAc1ZTLvpH0qqisEiiju4O7eg9ZMxwGy3qPeyhUb2JQ==", "images"=>{"image_url"=>[#<ActionDispatch::Http::UploadedFile:0x007f98df76cad0 @tempfile=#<Tempfile:/var/folders/xy/xh3_w3px68938m_y_x4c6cr80000gn/T/RackMultipart20191111-82028-c1o068.jpg>, @original_filename="phở-bò-HN.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[image_url][]\"; filename=\"pho\xCC\x9B\xCC\x89-bo\xCC\x80-HN.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "album"=>{"title"=>"Phở Hà Nội", "content"=>"Phở là một thứ quà đặc biệt của Hà Nội, không phải chỉ riêng Hà Nội mới có, nhưng chính là vì chỉ ở Hà Nội mới ngon.\r\n\r\nPhở ngon phải là phở “cổ điển”, nấu bằng thịt bò, nước dùng trong và ngọt. Bánh dẻo mà không nát, thịt mỡ gầu giòn chứ không dai, chanh ớt với hành tây đủ cả.\r\n\r\nRau thơm tươi, hồ tiêu bắc, giọt chanh cốm gắt, lại điểm thêm một ít cà cuống, thoảng nhẹ như một nghi ngờ.", "ingredient"=>""}, "commit"=>"SUBMIT"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "albums" ("title", "content", "user_id", "ingredient", "post_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Phở Hà Nội"], ["content", "Phở là một thứ quà đặc biệt của Hà Nội, không phải chỉ riêng Hà Nội mới có, nhưng chính là vì chỉ ở Hà Nội mới ngon.\r\n\r\nPhở ngon phải là phở “cổ điển”, nấu bằng thịt bò, nước dùng trong và ngọt. Bánh dẻo mà không nát, thịt mỡ gầu giòn chứ không dai, chanh ớt với hành tây đủ cả.\r\n\r\nRau thơm tươi, hồ tiêu bắc, giọt chanh cốm gắt, lại điểm thêm một ít cà cuống, thoảng nhẹ như một nghi ngờ."], ["user_id", 1], ["ingredient", ""], ["post_type", 0], ["created_at", "2019-11-11 10:43:38.486969"], ["updated_at", "2019-11-11 10:43:38.486969"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "images" ("image_url", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["image_url", "phở-bò-HN.jpg"], ["album_id", 2], ["created_at", "2019-11-11 10:43:38.497793"], ["updated_at", "2019-11-11 10:43:38.497793"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/albums/2
+Completed 302 Found in 20ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/albums/2" for ::1 at 2019-11-11 17:43:38 +0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 2]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 2], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?  [["commentable_id", 2], ["commentable_type", "Album"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered albums/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_nav2.html.erb (0.9ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:43:44 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 2], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mTagObject Load (0.1ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 2]]
+  Rendered static_pages/_post.html.erb (4.6ms)
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.1ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.2ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.2ms)
+  Rendered static_pages/_signed_in.html.erb (18.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (23.0ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-11-11 17:43:52 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."user_id" = ?  ORDER BY id DESC[0m  [["user_id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 2]]
+  Rendered users/_post.html.erb (1.7ms)
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  Rendered users/_post.html.erb (1.5ms)
+  [1m[35mShare Load (0.1ms)[0m  SELECT "shares".* FROM "shares" WHERE "shares"."user_id" = ?  ORDER BY id DESC  [["user_id", 1]]
+  [1m[36mAlbum Load (0.0ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_post.html.erb (2.1ms)
+  Rendered users/show.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:44:12 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 2], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mTagObject Load (0.1ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 2]]
+  Rendered static_pages/_post.html.erb (6.3ms)
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.2ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.1ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (20.6ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (7.1ms)
+  Rendered static_pages/_signed_in.html.erb (39.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (41.5ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/upload" for ::1 at 2019-11-11 17:44:12 +0700
+Processing by AlbumsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered albums/_form.html.erb (2.5ms)
+  Rendered albums/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/albums" for ::1 at 2019-11-11 17:44:57 +0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"98zICNGx0vqlm0DdSa17ijGMMt7m1IBtgNGZ+y1vAvWr8dcB03byYlO+uOrL+81ic4jrfLoQXNMjfBTiqjNXyw==", "images"=>{"image_url"=>[#<ActionDispatch::Http::UploadedFile:0x007f98e1821b68 @tempfile=#<Tempfile:/var/folders/xy/xh3_w3px68938m_y_x4c6cr80000gn/T/RackMultipart20191111-82028-rp65eo.jpg>, @original_filename="phở-cuốn.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[image_url][]\"; filename=\"pho\xCC\x9B\xCC\x89-cuo\xCC\x82\xCC\x81n.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "album"=>{"title"=>" Phở cuốn Hà Nội", "content"=>"Phở cuốn là một trong những món ngon Hà Nội đặc trưng của con người Hà Nội.\r\n\r\nThịt bò được cuốn trong bánh phở lớn, kết hợp với các loại rau thơm, xà lách tạo nên một món ăn hấp dẫn, ngon miệng và được rất nhiều người yêu thích\r\nPhở cuốn Hương Mai: 25 Ngũ xá, Ba Đình, Hà Nội. Giá 55k/đĩa 10 cái. \r\nPhở cuốn hưng bền: 33 Ngũ xá, Ba Đình, Hà Nội. Giá 55k/đĩa 10 cái.", "ingredient"=>""}, "commit"=>"SUBMIT"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "albums" ("title", "content", "user_id", "ingredient", "post_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", " Phở cuốn Hà Nội"], ["content", "Phở cuốn là một trong những món ngon Hà Nội đặc trưng của con người Hà Nội.\r\n\r\nThịt bò được cuốn trong bánh phở lớn, kết hợp với các loại rau thơm, xà lách tạo nên một món ăn hấp dẫn, ngon miệng và được rất nhiều người yêu thích\r\nPhở cuốn Hương Mai: 25 Ngũ xá, Ba Đình, Hà Nội. Giá 55k/đĩa 10 cái. \r\nPhở cuốn hưng bền: 33 Ngũ xá, Ba Đình, Hà Nội. Giá 55k/đĩa 10 cái."], ["user_id", 1], ["ingredient", ""], ["post_type", 0], ["created_at", "2019-11-11 10:44:57.445308"], ["updated_at", "2019-11-11 10:44:57.445308"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "images" ("image_url", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["image_url", "phở-cuốn.jpg"], ["album_id", 3], ["created_at", "2019-11-11 10:44:57.452758"], ["updated_at", "2019-11-11 10:44:57.452758"]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/albums/3
+Completed 302 Found in 21ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/albums/3" for ::1 at 2019-11-11 17:44:57 +0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 3]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 3], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?  [["commentable_id", 3], ["commentable_type", "Album"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered albums/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav2.html.erb (0.6ms)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:45:03 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY id DESC[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.3ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 3], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mTagObject Load (0.1ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 3]]
+  Rendered static_pages/_post.html.erb (7.2ms)
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 2], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mTagObject Load (0.1ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 2]]
+  Rendered static_pages/_post.html.erb (3.3ms)
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."album_id" = ?  [["album_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLike Load (0.1ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1[0m  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[35mTagObject Load (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.3ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.0ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = 1  ORDER BY "likes"."id" ASC LIMIT 1  [["likeable_id", 1], ["likeable_type", "Album"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (3.4ms)
+  Rendered static_pages/_signed_in.html.erb (24.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (27.1ms)
+  Rendered layouts/_nav2.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-11 17:45:15 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Okf5ZFK6tENl6ANfzRxyFv0z2CYDYSl2cIyvzwKEC/RmeuZtUH2U25PN+2hPSsT+vzcBhF+l9cjTISLWhdheyg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:45:15 +0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_main.html.erb (0.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_nav2.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-11 17:45:16 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-11 17:45:28 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z8n8a2cHzeiGbjyM8XlhLHfUZBxJ5YKYXo1KBAAoLe2R8LSrDNzpv7+s4KoSad5l0NvC3r5EHu494Kr9uCO1wA==", "user"=>{"email"=>"trungnn160697@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'trungnn160697@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "trungnn160697@gmail.com"], ["encrypted_password", "$2a$11$yy6z8M/ratDlR4veWwN.8ukl6ZQ59wdcdNivrrgQf5.WzcgQ7AFZC"], ["created_at", "2019-11-11 10:45:28.721553"], ["updated_at", "2019-11-11 10:45:28.721553"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2019-11-11 10:45:28.728069"], ["current_sign_in_at", "2019-11-11 10:45:28.728069"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2019-11-11 10:45:28.728738"], ["id", 2]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 137ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:45:28 +0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY id DESC
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 3], ["likeable_type", "Album"], ["user_id", 2]]
+  [1m[35mTagObject Load (0.0ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 3]]
+  Rendered static_pages/_post.html.erb (3.4ms)
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.1ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 2], ["likeable_type", "Album"], ["user_id", 2]]
+  [1m[35mTagObject Load (0.1ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 2]]
+  Rendered static_pages/_post.html.erb (2.9ms)
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLike Load (0.2ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 2]]
+  [1m[35mTagObject Load (0.1ms)[0m  SELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.3ms)
+  [1m[36mShare Load (0.1ms)[0m  [1mSELECT "shares".* FROM "shares" WHERE "shares"."shareable_type" = ?[0m  [["shareable_type", "Album"]]
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."album_id" = ?[0m  [["album_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."likeable_id" = ? AND "likes"."likeable_type" = ? AND "likes"."user_id" = ?[0m  [["likeable_id", 1], ["likeable_type", "Album"], ["user_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "tag_objects".* FROM "tag_objects" WHERE "tag_objects"."album_id" = ? LIMIT 1[0m  [["album_id", 1]]
+  Rendered static_pages/_post.html.erb (4.6ms)
+  Rendered static_pages/_signed_in.html.erb (20.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_nav2.html.erb (0.7ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-11 17:45:37 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BtQaOkpjhhz8YtSQtvLf7yOdBrPlrEgTBb51vmGAjdrw7VL6IbiiS8WgCLZV4mCmhJKgcRIN1GVm05VH2YsV9w=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 17:45:37 +0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_main.html.erb (0.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav2.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)

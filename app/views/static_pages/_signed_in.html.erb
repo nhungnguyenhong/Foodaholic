@@ -1,0 +1,32 @@
+<div class="row mx-5">
+  <div class="col-sm-8" style="margin-left: -60px">
+    <% if @albums.present? %>
+      <% @albums.each do |album| %>
+        <%= render "post", album: album, share: nil %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="col-sm-4" style="margin: 10px 0 0 50px;">
+    <% if @shares.present? %>
+      <% @shares.each do |share| %>
+        <%= render "post", album: Album.find_by_id(share.shareable_id), share: share %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  $('.submit-comment').on('click', function() {
+    $('.comment-form').submit();
+  });
+
+  $('.btn-like').on('click', function(e) {
+    $($(this).attr('data-id')).submit();
+  });
+
+
+  $('.btn-share').on('click', function() {
+    $($(this).attr('data-id')).submit();
+  });
+</script>

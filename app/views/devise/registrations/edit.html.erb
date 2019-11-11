@@ -1,0 +1,119 @@
+<div class="card card-body w-75 p-3" >
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {multipart: :true, method: :put}) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="preview">
+  </div>
+
+  <div class="md-form">
+    <% if current_user.avatar.url.present? %>
+      <div>
+        <%= f.label :remove_avatar %>
+        <%= f.check_box :remove_avatar %>
+      </div>
+      <%= image_tag current_user.avatar.url %>
+      
+      <%= f.label "Change Avatar" %>
+      <%= f.file_field :avatar, class: "upload-image" %>
+    <% else %>  
+      <%= f.label "Upload Avatar" %>
+      <%= f.file_field :avatar, class: "upload-image" %>
+    <% end %>
+  </div>
+  
+  <div class="md-form">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+    <label for="form1" >email</label>
+  </div>
+  
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="md-form">
+    <%= f.password_field :password, autocomplete: "off",class:"form-control"%>
+    <label for="form1" >Password (<% if @minimum_password_length %>
+        <em><%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+    </label>
+  </div>
+
+  <div class="md-form">
+    <%= f.password_field :password_confirmation, autocomplete: "off",class:"form-control" %>
+    <label for="form1" >Password Confirmation</label>
+  </div>
+
+  <div class="md-form">
+    <%= f.password_field :current_password, autocomplete: "off",class:"form-control" %>
+    <label for="form1" >Current Password</label>
+  </div>
+  
+  <div class="md-form">
+    <label for="form1" >Name</label>
+    <%= f.text_field :name, autocomplete: "off",class:"form-control" %>
+  </div>
+  
+  <div class="md-form">
+    <label for="form1" >From</label>
+    <%= f.text_field :from, autocomplete: "off",class:"form-control" %>
+  </div>
+  
+  <div class="md-form">
+    <label for="form1" >Lifestory</label>
+    <%= f.text_field :life_story, autocomplete: "off",class:"form-control" %>
+  </div>
+  
+   <div class="md-form">
+     <label for="form1" >Birthday</label>
+    <%= f.date_field :birthday, autocomplete: "off", class:"form-control" %>
+  </div>
+  
+   <div class="md-form">
+     <label for="form1" >Phone</label>
+    <%= f.text_field :phone, autofocus: true, autocomplete: "off",class:"form-control" %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "UPDATE", class:"btn btn-orange btn-rounded waves-effect"%>
+  </div>
+  
+<% end %>
+
+<%= button_to "DELETE MY ACCOUNT", registration_path(resource_name), data: { confirm: "Are you sure?" },
+  class: "btn btn-outline-red btn-rounded waves-effect btn-sm", method: :delete %>
+</div>
+
+<script>
+  $(function(){
+    $('.upload-image').on("change", function(){
+      var preview = document.querySelector('.preview');
+      preview.innerHTML = '';
+      var files   = document.querySelector('input[type=file]').files;
+
+      function readAndPreview(file) {
+
+        if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+          var reader = new FileReader();
+
+          reader.addEventListener("load", function () {
+            var image = new Image();
+            image.height = 100;
+            image.width = 150;
+            image.title = file.name;
+            image.src = this.result;
+            preview.appendChild( image );
+          }, false);
+
+          reader.readAsDataURL(file);
+        }
+
+      }
+
+      if (files) {
+        [].forEach.call(files, readAndPreview);
+      }
+    })
+
+  })
+</script>

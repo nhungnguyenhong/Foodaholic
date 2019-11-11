@@ -1,0 +1,109 @@
+<div class="card card-cascade wider reverse mt-1 mb-4" style="margin-left: -50px">
+  <div class="view view-cascade overlay">
+    <% if @user.avatar.url.present? %>
+      <!--<div class="mask rgba-white-slight"></div>-->
+      <img class="card-img-top" style="height: 350px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw2YBDBLIgKZpDjhG-a9uUbtn27PsgRRaXU99fPXEvKQDIUI_U" alt="Card image cap">
+    <% else %>
+      <img class="card-img-top" style="height: 350px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw2YBDBLIgKZpDjhG-a9uUbtn27PsgRRaXU99fPXEvKQDIUI_U" alt="Card image cap"
+    <% end %>
+  </div>
+
+  <div class="avatar white">
+    <%= image_tag @user.avatar.url, class: "avatar-border", style:"width: 250px"%>
+    <!--<img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="avatar-border" alt="woman avatar">-->
+  </div>
+
+  <div class="card-body card-body-cascade text-center">
+    <!-- Card -->
+
+    <h4 class="card-title text-left">
+      <strong>Name:
+        <% if @user.name.present? %>
+          <%= @user.name %>
+        <% else %>
+          Unknown
+        <%  end %>
+      </strong></h4>
+    <!-- Email -->
+    <h6 class="font-weight-bold indigo-text py-2 text-left">Email: <%= @user.email %></h6>
+    <!-- Birthday -->
+    <h6 class="font-weight-bold indigo-text py-2 text-left">Birthday:
+      <% if @user.birthday.present? %>
+        <%= @user.birthday %>
+      <% else%>
+        Unknown
+      <% end %></h6>
+    <!-- From -->
+    <h6 class="font-weight-bold indigo-text py-2 text-left">From:
+      <% if @user.from.present? %>
+        <%= @user.from %>
+      <% else%>
+        Unknown
+      <% end %></h6>
+    <!-- Life story -->
+    <h6 class="font-weight-bold indigo-text py-2 text-left">LifeStory:
+      <% if @user.life_story.present? %>
+        <%= @user.life_story %>
+      <% else%>
+        Unknown
+      <% end %></h6>
+    <!-- Phone -->
+    <h6 class="font-weight-bold indigo-text py-2 text-left">Phone:
+      <% if @user.phone.present? %>
+        <%= @user.phone %>
+      <% else%>
+        Unknown
+      <% end %></h6>
+
+    <% if current_user == @user %>
+      <%= link_to edit_user_registration_path do %>
+        <div class="btn btn-rounded btn-outline-orange">Edit Profile</div>
+      <% end %>
+    <% else %>
+      <% if @user.friends.ids.include?(current_user.id) %>
+        <%= link_to "Unfriend", friend_path(@user.id), method: :delete  %>
+      <% else %>
+        <%= form_for :friend, url: friends_path do |f| %>
+          <%= f.hidden_field :friend_id, value: @user.id %>
+
+          <%= f.submit "Add Friend" %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <h4 class="mt-4">Uploaded Album</h4>
+  <div class="row mx-5">
+    <% if @albums.present? %>
+      <% @albums.each do |album| %>
+        <%= render "post", album: album, share: nil%>
+      <% end %>
+    <% end %>
+  </div>
+
+  <h4 class="mt-4">Shared Content
+    <% if @shares.present? %>
+      <div class="row mx-5">
+        <% @shares.each do |share| %>
+
+            <%= render "post", album: Album.find_by_id(share.shareable_id), share: share %>
+        <% end %>
+      </div>
+    <% end %>
+  </h4>
+</div>
+<!-- Card -->
+<script>
+  $('.submit-comment').on('click', function() {
+    $('.comment-form').submit();
+  });
+
+  $('.btn-like').on('click', function(e) {
+    $($(this).attr('data-id')).submit();
+  });
+
+
+  $('.btn-share').on('click', function() {
+    $($(this).attr('data-id')).submit();
+  });
+</script>
